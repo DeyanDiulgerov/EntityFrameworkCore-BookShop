@@ -96,7 +96,7 @@
                 bool doesEmailExists = authors
                     .FirstOrDefault(x => x.Email == authorDto.Email) != null;
 
-                if (doesEmailExists)
+                if (!doesEmailExists)
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
